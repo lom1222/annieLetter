@@ -34,7 +34,7 @@ var annie = {
   allDone : false,
 };
 
-//load();
+load();
 
 var currentOp = 0;
 
