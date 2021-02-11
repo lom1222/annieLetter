@@ -1,0 +1,98 @@
+html{
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+body{
+  color : white;
+  background-color : black;
+  height: 95%;
+  width: 50%;
+  display: inline-block;
+}
+
+#stringHolder{
+  height: 40%;
+  display: inline-block;
+  position: relative;
+  width: 95%;
+}
+
+#string{
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  font-size: 32px;
+  font-family:serif;
+  transform: translate(0%, -100%);
+}
+
+#responces{
+  text-align: center;
+}
+
+#responce0{
+  display: block;
+}
+
+.responce{
+  display: none;
+  min-width: 100px;
+  min-height: 40px;
+  color: white;
+  background-color: black;
+  border: none;
+  border-bottom: 1px solid gray;
+  margin: auto;
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-family:serif;
+  transition-duration: 0.3s;
+}
+
+.responce:hover{
+  background-color: rgb(20,20,20);
+}
+
+#image{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  z-index: -1;
+}
+
+.responce:focus{
+  box-shadow: none;
+  outline: none;
+}
+
+#container{
+  width: 70%;
+  height: 100%;
+  display: inline-block;
+  vertical-align:top;
+}
+
+#debug{
+  width: 25%;
+  padding-top: 20%;
+  text-align: left;
+}
+
+.none{
+  display: none;
+}
+
+pre{
+  color: rgb(40,170,20);
+  font-family: courier;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.red{
+  color: red;
+}
