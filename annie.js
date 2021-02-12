@@ -1308,7 +1308,7 @@ var options = {
       {string : "/RESTART", nextOp : "op0", unlock : function(){return true;}},
     ],
     unlock : function(){
-      deleteProgress();
+      deleteProgress();},
   },
 };
 
