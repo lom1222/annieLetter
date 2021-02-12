@@ -1294,12 +1294,21 @@ var options = {
     image : "100.png",
     responces : [
       {string : "...", nextOp : "op1356", unlock : function(){return true;}},
+      {string : "*restart from the very beginning, this deletes all progress*", nextOp : "op1357", unlock : function(){return true;}},
     ],
     unlock : function(){
       if(!annie.allDone){
         annie.allDone = true;
         annie.trueEndings++;
         updateDebug();}},
+  },
+  op1357 : {
+    string : "ok.",
+    responces : [
+      {string : "/RESTART", nextOp : "op0", unlock : function(){return true;}},
+    ],
+    unlock : function(){
+      deleteProgress();
   },
 };
 
@@ -1432,6 +1441,40 @@ function load(){
     unlockTrueEndings();
   }
   updateDebug();
+}
+
+function deleteProgress(){
+  document.getElementById("trueEndingsHidden").style.display = "none";
+  document.getElementById("trueEndingHidden1").style.display = "none";
+  document.getElementById("trueEndingHidden2").style.display = "none";
+  document.getElementById("trueEndingHidden3").style.display = "none";
+  document.getElementById("trueEndingHidden4").style.display = "none";
+  document.getElementById("trueEndingHidden5").style.display = "none";
+  document.getElementById("debug").style.display = "none";
+  annie.trueEndings = 0;
+  annie.endings = 0;
+  annie.sideQuests = 0;
+  annie.flower = false;
+  annie.tripleHello = false;
+  annie.timeyWimey = false;
+  annie.heart = false;
+  annie.ripHeart = false;
+  annie.cat = false;
+  annie.dog = false;
+  annie.computer = false;
+  annie.letter = false;
+  annie.ukraine = false;
+  annie.books = false;
+  annie.people = false;
+  annie.birthday = false;
+  annie.glitch = false;
+  annie.password = false;
+  annie.instagram = false;
+  annie.end1 = false;
+  annie.end2 = false;
+  annie.end3 = false;
+  annie.end4 = false;
+  annie.allDone = false;
 }
 
 
